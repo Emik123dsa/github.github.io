@@ -1,3 +1,11 @@
+#particles-js {
+  background: rgba(41, 128, 185, 0.9);
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: -1;
+}
+
 @font-face {
   font-family: 'San Francisco Pro Display Thin';
   src: url("../fonts/SFProDisplay-Thin.eot");
@@ -30,6 +38,11 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Luna';
+  src: url("../fonts/Luna.ttf") format("truetype");
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -38,6 +51,14 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   font-family: 'San Francisco Pro Display Light';
+}
+
+*::-moz-selection {
+  background: rgba(52, 152, 219, 0.4);
+}
+
+*::selection {
+  background: rgba(52, 152, 219, 0.4);
 }
 
 * {
@@ -51,9 +72,181 @@ body {
   margin: 0 auto;
 }
 
+.hero {
+  position: relative;
+  top: 200px;
+}
+
+.hero_wrap_social_medias {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 50%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.hero_wrap_swtich_buttons {
+  top: 50%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.hero_button {
+  z-index: 1000;
+  font-family: 'San Francisco Pro Display Light';
+  padding-right: 25px;
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 28px;
+}
+
+.hero_button_switch {
+  position: relative;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.hero_button::before {
+  position: absolute;
+  content: '';
+  background: #ecf0f1;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+}
+
+.hero_wrap_social_medias::before {
+  position: absolute;
+  content: '';
+  background: rgba(236, 240, 241, 0.7);
+  border-radius: 10px;
+  width: 2px;
+  height: 165px;
+  top: -10px;
+  left: 100%;
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+  -webkit-transform: translate(-50%) rotate(180deg);
+          transform: translate(-50%) rotate(180deg);
+}
+
+.hero_wrap_social_medias::after {
+  position: absolute;
+  content: '';
+  background: rgba(236, 240, 241, 0.7);
+  border-radius: 10px;
+  width: 2px;
+  height: 165px;
+  bottom: -10px;
+  left: 100%;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transform: translate(-50%) rotate(180deg);
+          transform: translate(-50%) rotate(180deg);
+}
+
+.hero_wrap_dentist_equipments {
+  z-index: -1;
+  position: relative;
+  margin-left: 100px;
+  margin-right: 50px;
+}
+
+.hero_wrap_dentist_equipments_first {
+  top: 0;
+  opacity: 1;
+  position: relative;
+  background: linear-gradient(45deg, rgba(0, 210, 255, 0.5), rgba(58, 123, 213, 0.4)), url("../img/slider_1.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  padding: 250px 0px;
+  -webkit-transition: 0.7s ease;
+  transition: 0.7s ease;
+}
+
+.hero_wrap_dentist_equipments_first_active {
+  position: absolute;
+  -webkit-transition: 0.7s ease;
+  transition: 0.7s ease;
+  opacity: 0;
+}
+
+.hero_wrap_dentist_equipments_second {
+  -webkit-transition: 0.7s ease;
+  transition: 0.7s ease;
+  position: absolute;
+  opacity: 0;
+  background-image: linear-gradient(45deg, rgba(75, 108, 183, 0.5), rgba(24, 40, 72, 0.8)), url("../img/slider_2.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 250px 0px;
+}
+
+.hero_wrap_dentist_equipments_second_active {
+  -webkit-transition: 0.7s ease;
+  transition: 0.7s ease;
+  position: relative;
+  opacity: 1;
+}
+
+.hero_wrap_dentist_equipments_third {
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: 0.7s ease;
+  transition: 0.7s ease;
+  background: linear-gradient(45deg, rgba(0, 210, 255, 0.5), rgba(58, 123, 213, 0.4)), url("../img/slider_3.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  padding: 250px 0px;
+}
+
+.hero_wrap_dentist_equipments_third_active {
+  -webkit-transition: 0.7s ease;
+  transition: 0.7s ease;
+  position: relative;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.navbar_description {
+  background: #ffffff;
+  position: relative;
+}
+
+.navbar_description_wrap_search_content_title {
+  margin-right: 12px;
+}
+
 .navbar_description_wrap {
+  font-family: 'San Francisco Pro Display Light';
+  letter-spacing: 0.15px;
   color: #bdc3c7;
-  margin-top: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -105,14 +298,14 @@ body {
 }
 
 .navbar_description_wrap_search_content_icon {
-  margin-left: 20px;
   position: relative;
+  padding-right: 18px;
 }
 
 .navbar_description_wrap_search_content_icon::before {
   position: absolute;
   content: '';
-  border: 1px solid #bdc3c7;
+  border: 2px solid #34495e;
   width: 12px;
   border-radius: 50%;
   height: 12px;
@@ -122,14 +315,130 @@ body {
 .navbar_description_wrap_search_content_icon::after {
   position: absolute;
   content: '';
-  width: 1px;
+  width: 2px;
   height: 10px;
   bottom: 0;
   -webkit-transform-origin: center center;
           transform-origin: center center;
   border-radius: 10px;
-  -webkit-transform: rotate(-45deg) translate(8px, 11.5px);
-          transform: rotate(-45deg) translate(8px, 11.5px);
-  background: #bdc3c7;
+  -webkit-transform: rotate(-45deg) translate(8px, 12.5px);
+          transform: rotate(-45deg) translate(8px, 12.5px);
+  background: #34495e;
+}
+
+.navbar {
+  background: rgba(236, 240, 241, 0.9);
+}
+
+.navbar_main {
+  -webkit-transition: .6s ease;
+  transition: .6s ease;
+  position: fixed;
+  width: 100%;
+  opacity: 1;
+  -webkit-transform: translateY(0px) scale(1);
+          transform: translateY(0px) scale(1);
+}
+
+.navbar_main_active {
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+  -webkit-transform: translateY(-68px) scale(1);
+          transform: translateY(-68px) scale(1);
+  opacity: 1;
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+}
+
+.navbar_wrap_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar_wrap {
+  padding: 25px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar_wrap_list_ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar_wrap_list_li {
+  font-size: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: 'San Francisco Pro Display Regular';
+}
+
+.navbar_links {
+  text-decoration: none;
+  color: #2c3e50;
+}
+
+.navbar_wrap_title_logo {
+  margin-left: 70px;
+  font-family: 'San Francisco Pro Display Ultra Light';
+  color: #3498db;
+  letter-spacing: 2px;
+}
+
+.navbar_wrap_logotype {
+  background: url("../img/logotype.png") no-repeat center;
+  background-size: contain;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+}
+
+.navbar_wrap_telephone_title {
+  font-family: 'San Francisco Pro Display Ultra Light';
+  font-size: 24px;
+  margin-left: 10px;
+}
+
+.navbar_wrap_telephone {
+  padding-left: 20px;
+}
+
+.fa-phone-alt {
+  color: #3498db;
+}
+
+.fab {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border-radius: 1px;
+  -webkit-box-shadow: 0px 0px 5px rgba(189, 195, 199, 0.8);
+          box-shadow: 0px 0px 5px rgba(189, 195, 199, 0.8);
+  background: #ecf0f1;
+  text-align: center;
+  position: relative;
+  padding-top: 7px;
+  -webkit-transform: translateX(15px);
+          transform: translateX(15px);
+  height: 30px;
+  width: 30px;
 }
 /*# sourceMappingURL=style.css.map */

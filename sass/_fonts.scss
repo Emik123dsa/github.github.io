@@ -54,3 +54,11 @@
     font-family: 'San Francisco Pro Display Light';
 }
 
+@font-face {
+    font-family: 'Luna';
+    src: url('../fonts/Luna.ttf') format('truetype');
+}
+
+@mixin luna {
+    font-family: 'Luna';
+}
