@@ -1,0 +1,51 @@
+.navbar_description
+    &_wrap
+        color: #bdc3c7
+        margin-top: 25px
+        display: flex 
+        flex-wrap: wrap
+        flex-basis: 100%
+        justify-content: space-between
+        align-items: center
+    &_wrap_content
+        display: flex 
+        flex-wrap: wrap
+        //justify-content: space-between
+        align-items: center
+    &_wrap_work_time
+        position: relative
+        padding-left: 30px
+    &_wrap_work_time::before 
+        position: absolute 
+        width: 2px 
+        height: 15px 
+        transform: translate(-1px)
+        left: 0
+        background: #bdc3c7 
+        content: ''
+    &_wrap_address_title
+        padding-right: 30px
+    &_wrap_address_title 
+        font-style: normal
+    &_wrap_search_content_icon 
+        margin-left: 20px
+        position: relative
+    &_wrap_search_content_icon::before
+        position: absolute 
+        content: ''
+        border: 1px solid #bdc3c7
+        width: 12px 
+        border-radius: 50%
+        height: 12px 
+        background: transparent
+    &_wrap_search_content_icon::after 
+        position: absolute 
+        content: ''
+        width: 1px
+        height: 10px 
+        bottom: 0
+        transform-origin: center center
+        border-radius: 10px
+        transform: rotate(-45deg) translate(8px, 11.5px)
+        background: #bdc3c7
+        
