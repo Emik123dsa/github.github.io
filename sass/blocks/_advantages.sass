@@ -1,0 +1,75 @@
+.advantages 
+    &_wrap_features
+        display: flex 
+        flex-wrap: wrap 
+        flex-basis: 25%
+        justify-content: space-around 
+        align-items: center
+    &_wrap_features_third_img
+        margin: 0 auto
+        position: relative
+        width: 120px 
+        height: 120px
+        border-radius: 50%
+        background: rgba(236, 240, 241,1.0)
+    &_wrap_features_first_img
+        margin: 0 auto
+        position: relative
+        width: 120px 
+        height: 120px
+        border-radius: 50%
+        background: rgba(236, 240, 241,1.0)
+    &_wrap_features_second_img
+        position: relative
+        margin: 0 auto
+        width: 120px 
+        height: 120px
+        border-radius: 50%
+        background: rgba(236, 240, 241,1.0)
+    &_wrap_features_fourth_img
+        margin: 0 auto
+        position: relative
+        width: 120px 
+        height: 120px
+        border-radius: 50%
+        background: rgba(236, 240, 241,1.0)
+    &_wrap_content
+        font-size: 32px
+        margin-top: 40px
+        margin-bottom: 40px
+        text-align: center
+        text-transform: uppercase
+        color: rgba(236, 240, 241, 1)
+        +regular
+    &_wrap_features_single
+        text-align: center
+    &_wrap_feature_p 
+        +regular
+        text-transform: uppercase
+        font-size: 24px
+        position: relative
+        padding-top: 40px 
+        padding-bottom: 40px 
+        margin: 0
+        top: 0
+        color: rgba(236, 240, 241,1.0)
+    &_wrap_feature_p::before 
+        position: absolute
+        left: 50%
+        transform: translate(-50%, -20px)
+        content: ''
+        background: rgba(236, 240, 241,1.0)
+        width: 50% 
+        height: 2px
+    &_wrap_feature_p::after
+        position: absolute
+        left: 50%
+        transform: translate(-50%, 40px)
+        content: '&'
+        color: rgba(236, 240, 241,1.0)
+    &_wrap_feature_span
+        font-size: 18px
+        color: rgba(236, 240, 241,1.0)
+    &_wrap_title_bottom
+        text-align: center
+        margin-bottom: 40px

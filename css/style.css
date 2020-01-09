@@ -1,9 +1,9 @@
 #particles-js {
-  background: #34495e;
-  position: absolute;
+  background: #2980b9;
+  position: fixed;
   z-index: -1;
   top: 0;
-  height: 200%;
+  height: 100%;
   width: 100%;
 }
 
@@ -50,10 +50,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'San Francisco Pro Display Ultra Light';
 }
 
-body {
-  font-family: 'San Francisco Pro Display Light';
-}
-
 *::-moz-selection {
   background: rgba(52, 152, 219, 0.4);
 }
@@ -82,6 +78,10 @@ body {
   content: '';
 }
 
+body {
+  font-family: 'San Francisco Pro Display Light';
+}
+
 li {
   margin: 0;
   padding: 0;
@@ -106,6 +106,8 @@ ul {
 
 .hero {
   position: relative;
+  padding-top: 250px;
+  background: #ecf0f1;
 }
 
 .hero_wrap_social_medias {
@@ -252,21 +254,21 @@ ul {
 }
 
 .hero_wrap_dentist_equipments_first_description {
-  margin-top: 150px;
+  margin-top: 25px;
   text-align: center;
   position: relative;
   z-index: 999;
 }
 
 .hero_wrap_dentist_equipments_second_description {
-  margin-top: 150px;
+  margin-top: 25px;
   text-align: center;
   position: relative;
   z-index: 999;
 }
 
 .hero_wrap_dentist_equipments_third_description {
-  margin-top: 150px;
+  margin-top: 25px;
   text-align: center;
   position: relative;
   z-index: 999;
@@ -540,8 +542,8 @@ ul {
 }
 
 @kyeframes {}.navbar_description {
-  background: -webkit-gradient(linear, left bottom, left top, from(#ecf0f1), to(rgba(189, 195, 199, 0.5)));
-  background: linear-gradient(to top, #ecf0f1, rgba(189, 195, 199, 0.5));
+  background: -webkit-gradient(linear, left bottom, left top, from(#ecf0f1), to(rgba(189, 195, 199, 0.7)));
+  background: linear-gradient(to top, #ecf0f1, rgba(189, 195, 199, 0.7));
   position: relative;
 }
 
@@ -639,19 +641,25 @@ ul {
 }
 
 .navbar_main {
-  -webkit-transition: .6s ease;
-  transition: .6s ease;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
   opacity: 1;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
   -webkit-transform: translateY(0px) scale(1);
           transform: translateY(0px) scale(1);
 }
 
 .navbar_main_active {
-  -webkit-transition: 0.6s ease;
-  transition: 0.6s ease;
-  -webkit-transform: translateY(-68px) scale(1);
-          transform: translateY(-68px) scale(1);
+  -webkit-box-shadow: 0px 0px 15px #2c3e50;
+          box-shadow: 0px 0px 15px #2c3e50;
   opacity: 1;
+  -webkit-animation: bouncemenu 1s ease 1;
+          animation: bouncemenu 1s ease 1;
+  -webkit-transform: translateY(-68px);
+          transform: translateY(-68px);
+  position: fixed;
   -webkit-transform-origin: top center;
           transform-origin: top center;
 }
@@ -727,6 +735,44 @@ ul {
   padding-left: 20px;
 }
 
+@-webkit-keyframes bouncemenu {
+  0% {
+    -webkit-transform: translateY(0px) scale(1);
+            transform: translateY(0px) scale(1);
+  }
+  25% {
+    -webkit-transform: translateY(-68px) scale(1);
+            transform: translateY(-68px) scale(1);
+  }
+  50% {
+    -webkit-transform: translateY(-48px) scale(1);
+            transform: translateY(-48px) scale(1);
+  }
+  100% {
+    -webkit-transform: translateY(-68px) scale(1);
+            transform: translateY(-68px) scale(1);
+  }
+}
+
+@keyframes bouncemenu {
+  0% {
+    -webkit-transform: translateY(0px) scale(1);
+            transform: translateY(0px) scale(1);
+  }
+  25% {
+    -webkit-transform: translateY(-68px) scale(1);
+            transform: translateY(-68px) scale(1);
+  }
+  50% {
+    -webkit-transform: translateY(-48px) scale(1);
+            transform: translateY(-48px) scale(1);
+  }
+  100% {
+    -webkit-transform: translateY(-68px) scale(1);
+            transform: translateY(-68px) scale(1);
+  }
+}
+
 .fa-phone-alt {
   color: #3498db;
 }
@@ -782,7 +828,12 @@ ul {
 }
 
 .fa-second {
+  color: #3498db;
+}
+
+.fa-users {
   color: #ecf0f1;
+  text-shadow: 0px 0px 2px #ecf0f1;
 }
 
 .fab {
@@ -831,57 +882,273 @@ ul {
   background: #2c3e50;
 }
 
-.forms_features_wrap {
-  padding-top: 20px;
+.fa-medkit {
+  color: #ecf0f1;
+  text-shadow: 0px 0px 2px #ecf0f1;
+}
+
+.fa-hands-helping {
+  color: #ecf0f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #3498db;
+}
+
+.fa-star {
+  color: #ecf0f1;
+}
+
+.fa-tools {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #3498db;
+}
+
+.fa-hourglass-half {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #3498db;
+}
+
+.fa-shipping-fast {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #3498db;
+}
+
+.forms_features_wrap_users {
+  position: relative;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.forms_features_wrap_users::before {
+  position: absolute;
+  content: '';
+  width: 100px;
+  height: 2px;
+  -webkit-transform: translate(80px, -50%);
+          transform: translate(80px, -50%);
+  border-radius: 20px;
+  top: 50%;
+  background: #ecf0f1;
+}
+
+.forms_features_wrap_users::after {
+  position: absolute;
+  content: '';
+  width: 100px;
+  height: 2px;
+  -webkit-transform: translate(-180px, -50%);
+          transform: translate(-180px, -50%);
+  top: 50%;
+  background: #ecf0f1;
+}
+
+.forms_features_wrap_equipments_descriptions_showing {
+  font-size: 18px;
+  margin-top: 100px;
+  background: #ecf0f1;
+  color: #3498db;
+  border: none;
+  overflow: hidden;
+  padding: 15px 15px;
+  position: relative;
+  text-transform: uppercase;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+.forms_features_wrap_equipments_descriptions_showing:hover {
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+  -webkit-box-shadow: 0px 0px 5px #2c3e50;
+          box-shadow: 0px 0px 5px #2c3e50;
+}
+
+.forms_features_wrap_equipments_descriptions_showing:hover {
+  color: #ecf0f1;
+  z-index: 999;
+  position: relative;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.forms_features_wrap_equipments_descriptions_showing::before {
+  position: absolute;
+  content: '';
+  width: 0;
+  z-index: -1;
+  height: 100%;
+  background: #3498db;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -60%);
+          transform: translate(-50%, -60%);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+  opacity: 0;
+}
+
+.forms_features_wrap_equipments_descriptions_showing:hover::before {
+  width: 100%;
+  top: 50%;
+  opacity: 1;
+  z-index: -1;
+  left: 50%;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+  height: 150%;
+  -webkit-transform: translate(-50%, -60%);
+          transform: translate(-50%, -60%);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
 }
 
 .forms_features_wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -ms-flex-preferred-size: 33.33%;
+      flex-basis: 33.33%;
 }
 
 .forms_features_wrap_schedule_title_content {
   color: #ecf0f1;
+  margin-left: -50px;
+  z-index: 99;
+  font-family: 'San Francisco Pro Display Regular';
+  text-transform: uppercase;
+  position: relative;
   font-size: 24px;
 }
 
-.forms_features_wrap_schedule {
+.forms_features_wrap_equipments_descriptions_content {
+  margin-top: 40px;
   position: relative;
-  border-bottom: 1px solid white;
-  border-right: 1px solid white;
-  width: 300px;
+}
+
+.forms_features_wrap_equipments_descriptions_content::before {
+  position: absolute;
+  content: '';
+  width: 50px;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  left: 20%;
+  height: 2px;
+  border-radius: 20px;
+  background: #ecf0f1;
+  bottom: -35px;
+}
+
+.forms_features_wrap_equipments_descriptions_title {
+  font-size: 20px;
+  color: #ecf0f1;
+  font-family: 'San Francisco Pro Display Light';
+}
+
+.forms_features_wrap_equipments_title_content {
+  font-family: 'San Francisco Pro Display Regular';
+  text-transform: uppercase;
+  color: #ecf0f1;
+  margin-left: -50px;
+  font-size: 24px;
+}
+
+.forms_features_wrap_equipments {
+  margin-top: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 50px;
+  position: relative;
+  border-bottom: 2px solid #ecf0f1;
+  border-right: 2px solid #ecf0f1;
+}
+
+.forms_features_wrap_equipments::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  background: #ecf0f1;
+  width: 2px;
+  height: 250px;
+  bottom: 0;
+}
+
+.forms_features_wrap_equipments::after {
+  position: absolute;
+  content: '';
+  right: 0;
+  background: #ecf0f1;
+  width: 250px;
+  height: 2px;
+  top: 0;
+}
+
+.forms_features_wrap_schedule {
+  padding: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+  position: relative;
+  border-bottom: 2px solid #ecf0f1;
+  border-right: 2px solid #ecf0f1;
+  margin-top: 40px;
 }
 
 .forms_features_wrap_schedule::before {
   position: absolute;
   content: '';
   left: 0;
-  background: white;
-  width: 1px;
-  height: 200px;
+  background: #ecf0f1;
+  width: 2px;
+  height: 250px;
   bottom: 0;
 }
 
 .forms_features_wrap_schedule::after {
   position: absolute;
+  z-index: 0;
   content: '';
   right: 0;
-  background: white;
-  width: 200px;
-  height: 1px;
+  background: #ecf0f1;
+  width: 250px;
+  height: 2px;
   top: 0;
 }
 
 .forms_settings_line {
+  color: #ecf0f1;
+  font-family: 'San Francisco Pro Display Regular';
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.forms_tables_center {
+  color: #ecf0f1;
+  font-family: 'San Francisco Pro Display Regular';
+  font-size: 18px;
+  text-transform: uppercase;
   margin-bottom: 20px;
   position: relative;
 }
@@ -896,7 +1163,7 @@ ul {
 }
 
 .forms_tables_right {
-  padding: 0;
+  width: 250px;
   margin-top: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -907,6 +1174,15 @@ ul {
   position: relative;
 }
 
+.forms_tables_hours {
+  color: #ecf0f1;
+  font-family: 'San Francisco Pro Display Regular';
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  position: relative;
+}
+
 .forms_tables_bottom_line::before {
   content: '';
   position: absolute;
@@ -914,5 +1190,335 @@ ul {
   bottom: 0;
   height: 2px;
   background: #ffffff;
+}
+
+.forms_features_wrap_form_suggestion {
+  margin-top: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 50px 250px;
+  position: relative;
+  border-bottom: 2px solid #ecf0f1;
+  border-right: 2px solid #ecf0f1;
+}
+
+.forms_features_wrap_form_suggestion::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  background: #ecf0f1;
+  width: 2px;
+  height: 250px;
+  bottom: 0;
+}
+
+.forms_features_wrap_form_suggestion::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  background: #ecf0f1;
+  width: 450px;
+  height: 2px;
+  right: 0;
+}
+
+.forms_p_phone {
+  margin-top: 40px;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.forms_p_e_mail {
+  margin-top: 40px;
+  margin-bottom: 0px;
+  padding: 0;
+}
+
+.forms_features_wrap_form_suggestion_title_content {
+  color: #ecf0f1;
+  margin-left: -250px;
+  z-index: 99;
+  font-family: 'San Francisco Pro Display Regular';
+  text-transform: uppercase;
+  position: relative;
+  font-size: 24px;
+}
+
+.forms_input_phone {
+  -webkit-box-shadow: 0px 0px 5px #2c3e50;
+          box-shadow: 0px 0px 5px #2c3e50;
+  background: #ecf0f1;
+  border: none;
+  width: 250px;
+  outline: none;
+  padding: 15px 25px;
+  font-size: 20px;
+}
+
+.forms_input_e_mail {
+  -webkit-box-shadow: 0px 0px 5px #2c3e50;
+          box-shadow: 0px 0px 5px #2c3e50;
+  background: #ecf0f1;
+  border: none;
+  width: 250px;
+  outline: none;
+  padding: 15px 25px;
+  font-size: 20px;
+}
+
+.forms_style_button_text {
+  font-size: 18px;
+  margin-top: 40px;
+  width: 250px;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+.forms_style_button_text:hover {
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+  -webkit-box-shadow: 0px 0px 5px #2c3e50;
+          box-shadow: 0px 0px 5px #2c3e50;
+}
+
+.forms_features {
+  padding-bottom: 40px;
+}
+
+@media (max-width: 876px) {
+  .forms_features_wrap_form_suggestion {
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 50px 50px;
+    position: relative;
+    border-bottom: 2px solid #ecf0f1;
+    border-right: 2px solid #ecf0f1;
+  }
+  .forms_features_wrap_form_suggestion::before {
+    height: 250px;
+  }
+  .forms_features_wrap_form_suggestion::after {
+    width: 250px;
+  }
+  .forms_features_wrap_form_suggestion_title_content {
+    color: #ecf0f1;
+    margin-left: -50px;
+    z-index: 99;
+    font-family: 'San Francisco Pro Display Regular';
+    text-transform: uppercase;
+    position: relative;
+    font-size: 24px;
+  }
+}
+
+.offers_features {
+  position: relative;
+}
+
+.offers_features_background {
+  -webkit-box-shadow: 0px 0px 55px #2980b9;
+          box-shadow: 0px 0px 55px #2980b9;
+  position: relative;
+  z-index: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#2980b9), color-stop(rgba(41, 128, 185, 0.5)), to(#2980b9)), url("../img/facility_2.png");
+  background-image: linear-gradient(to bottom, #2980b9, rgba(41, 128, 185, 0.5), #2980b9), url("../img/facility_2.png");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+}
+
+.offers_features_background_title {
+  padding-top: 40px;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  font-size: 32px;
+  font-family: 'San Francisco Pro Display Regular';
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  color: snow;
+}
+
+.offers_features_background_content {
+  margin-top: 40px;
+  text-align: center;
+  position: relative;
+}
+
+.offers_features_background_content::before {
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  content: '';
+  border-radius: 5px;
+  background: #ecf0f1;
+  top: 50%;
+  -webkit-transform: translate(65px, -50%);
+          transform: translate(65px, -50%);
+}
+
+.offers_features_background_content::after {
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  content: '';
+  border-radius: 5px;
+  background: #ecf0f1;
+  top: 50%;
+  -webkit-transform: translate(-165px, -50%);
+          transform: translate(-165px, -50%);
+}
+
+.offers_features_wrap_description {
+  margin-top: 20px;
+  color: #ecf0f1;
+  font-size: 24px;
+  font-family: 'San Francisco Pro Display Light';
+  margin-top: 20px;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.offers_features_wrap_description_title {
+  color: #ecf0f1;
+  font-size: 32px;
+  font-family: 'San Francisco Pro Display Regular';
+  position: relative;
+  overflow: hidden;
+  paddin-right: -10px;
+}
+
+.offers_features_wrap_description_title::before {
+  position: absolute;
+  content: '';
+  left: 50%;
+  background: #ecf0f1;
+  width: 100%;
+  height: 2px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.offers_features_wrap {
+  margin-left: 20px;
+}
+
+.offers_features_background_description {
+  margin-top: 40px;
+  color: #ecf0f1;
+  font-size: 24px;
+  font-family: 'San Francisco Pro Display Light';
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+.advantages_wrap_features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.advantages_wrap_features_third_img {
+  margin: 0 auto;
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #ecf0f1;
+}
+
+.advantages_wrap_features_first_img {
+  margin: 0 auto;
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #ecf0f1;
+}
+
+.advantages_wrap_features_second_img {
+  position: relative;
+  margin: 0 auto;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #ecf0f1;
+}
+
+.advantages_wrap_features_fourth_img {
+  margin: 0 auto;
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #ecf0f1;
+}
+
+.advantages_wrap_content {
+  font-size: 32px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ecf0f1;
+  font-family: 'San Francisco Pro Display Regular';
+}
+
+.advantages_wrap_features_single {
+  text-align: center;
+}
+
+.advantages_wrap_feature_p {
+  font-family: 'San Francisco Pro Display Regular';
+  text-transform: uppercase;
+  font-size: 24px;
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin: 0;
+  top: 0;
+  color: #ecf0f1;
+}
+
+.advantages_wrap_feature_p::before {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, -20px);
+          transform: translate(-50%, -20px);
+  content: '';
+  background: #ecf0f1;
+  width: 50%;
+  height: 2px;
+}
+
+.advantages_wrap_feature_p::after {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 40px);
+          transform: translate(-50%, 40px);
+  content: '&';
+  color: #ecf0f1;
+}
+
+.advantages_wrap_feature_span {
+  font-size: 18px;
+  color: #ecf0f1;
+}
+
+.advantages_wrap_title_bottom {
+  text-align: center;
+  margin-bottom: 40px;
 }
 /*# sourceMappingURL=style.css.map */
