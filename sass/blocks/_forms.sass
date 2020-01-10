@@ -1,4 +1,22 @@
 .forms
+    &_wave_bottom
+        background: url('../img/wave_up.svg') no-repeat center center 
+        //background-size: cover 
+        bottom: 0
+        z-index: 99
+        width: 100%
+        height: 185px
+        position: relative
+    &_wave_up
+        background: url('../img/wave.svg') no-repeat center center 
+        //background-size: cover 
+        top: 0
+        z-index: -10
+        transform: rotate(180deg)
+        z-index: 99
+        width: 100%
+        height: 185px
+        position: relative
     &_features_wrap_users
         position: relative
         text-align: center 
@@ -71,7 +89,7 @@
         color: rgba(236, 240, 241,1.0)
         margin-left: -50px
         z-index: 99
-        +regular
+        +tech
         text-transform: uppercase
         position: relative
         font-size: 24px
@@ -91,9 +109,9 @@
     &_features_wrap_equipments_descriptions_title
         font-size: 20px
         color: rgba(236, 240, 241,1.0)  
-        +light
+        +tech
     &_features_wrap_equipments_title_content
-        +regular 
+        +tech 
         text-transform: uppercase
         color: rgba(236, 240, 241,1.0)
         margin-left: -50px
@@ -149,14 +167,14 @@
         top: 0
     &_settings_line
         color: rgba(236, 240, 241,1.0)
-        +regular 
+        +tech 
         font-size: 18px
         text-transform: uppercase
         margin-bottom: 20px
         position: relative
     &_tables_center
         color: rgba(236, 240, 241,1.0)
-        +regular 
+        +tech
         font-size: 18px
         text-transform: uppercase
         margin-bottom: 20px
@@ -176,7 +194,7 @@
         position: relative
     &_tables_hours 
         color: rgba(236, 240, 241,1.0)
-        +regular 
+        +tech 
         font-size: 18px
         text-transform: uppercase
         margin-bottom: 20px
@@ -224,7 +242,7 @@
         color: rgba(236, 240, 241,1.0)
         margin-left: -250px
         z-index: 99
-        +regular
+        +tech
         text-transform: uppercase
         position: relative
         font-size: 24px
@@ -253,7 +271,13 @@
         transition: 0.4s ease
         box-shadow: 0px 0px 5px rgba(44, 62, 80,1.0)
     &_features
-        padding-bottom: 40px
+        position: relative
+    &_features_title
+        text-align: center 
+        color: #ecf0f1
+        text-transform: uppercase 
+        font-size: 32px 
+        +tech
 
 @media (max-width: 876px)
     .forms
@@ -273,7 +297,7 @@
             color: rgba(236, 240, 241,1.0)
             margin-left: -50px
             z-index: 99
-            +regular
+            +tech
             text-transform: uppercase
             position: relative
             font-size: 24px
