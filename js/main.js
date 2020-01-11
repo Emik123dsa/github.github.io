@@ -103,11 +103,18 @@ window.addEventListener("DOMContentLoaded", function() {
     image_first.classList.add('animated', 'fadeInDownBig');
 });
 
+const reviewImage = document.getElementById('review_parallax');
 
 function scroll () {
     if (pageYOffset >= 100) {
+        parallax_feature.style.backgroundPositionY = `${pageYOffset/2-950}px`;
+        if (document.body.clientWidth > '1170') {
         menuMain.classList.add('navbar_main_active');
-       parallax_feature.style.backgroundPositionY = `${pageYOffset/2-950}px`;
+        } else {
+            menuMain.classList.add('navbar_main_active_mobile');
+        }
+        
+     //reviewImage.style.backgroundPositionY = `${pageYOffset/3-1800}px`;
     }
     else {
         menuMain.classList.remove('navbar_main_active');
