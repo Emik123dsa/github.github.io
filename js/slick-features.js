@@ -11,3 +11,5 @@ $('.offers_features_background_description').slick({
 	fade: true,
 	fadeSpeed: 4000
 });
+
+$('.equipments_wrap_slider').slick();

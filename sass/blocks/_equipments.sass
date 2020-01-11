@@ -1,0 +1,43 @@
+.equipments
+    background: rgba(41, 128, 185,0.8)
+    &_wrap_content
+        margin-top: 40px
+        text-align: center
+        position: relative
+    &_wrap_content::before 
+        position: absolute
+        content: ''
+        width: 100px 
+        height: 2px 
+        background: rgba(236, 240, 241,1.0)
+        transform: translate(70px, -50%)
+        top: 50%
+    &_wrap_content::after 
+        position: absolute
+        content: ''
+        width: 100px 
+        height: 2px 
+        background: rgba(236, 240, 241,1.0)
+        transform: translate(-170px, -50%)
+        top: 50%
+    &_wrap_title
+        text-align: center
+        font-size: 32px 
+        +tech
+        color: rgba(236, 240, 241,1.0)
+        text-transform: uppercase
+    &_wrap 
+        padding-top: 40px
+    &_wrap_slider
+        margin-top: 40px
+    &_wrap_slider
+        border: 1px solid black
+        //justify-content: space-around
+        //align-items: center
+    &_wrap_slider_first
+        border: 1px solid black
+        height: 328.5px
+        width: 422.5px
+        background-size: cover
+        //background: linear-gradient(to bottom, rgba(52, 152, 219,.5), rgba(236, 240, 241,1.0))
+    
