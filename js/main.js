@@ -127,19 +127,22 @@ function scroll () {
     }
 }
 
+function check_out() {
 if (document.body.clientWidth > '1170') {
     node.style.position = "relative";
     navbar.style.position = "relative";
-    node.style.height = "0";
-    navbar.style.height = "0";
+    media.style.visibility = "visible";
     } else {
-        media.remove();
+        media.style.visibility = "hidden";
         //menuMain.classList.add('navbar_main_active_mobile');
         node.style.position = "absolute";
         navbar.style.position = "absolute";
         node.style.height = "0";
         navbar.style.height = "0";
     }
+}
+
+check_out();
 
 
 window.addEventListener('scroll', scroll);
