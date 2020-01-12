@@ -122,38 +122,146 @@
         &_wrap_list_ul
             visibility: hidden
         &_wrap_list_menu_link 
-            width: 40px
-            height: 40px 
+            width: 30px
+            height: 30px 
             //border: 1px solid black
             position: absolute
-            right: 40px
+            right: 60px
             top: 50% 
             transform: translateY(-50%)
+        &_wrap_list_menu_about_link
+            //border: 1px solid black
+            right: 15px
+            top: 50% 
+            transform: translateY(-50%)
+            width: 30px
+            position: absolute
+            height: 30px 
+        &_wrap_list_menu_about
+            position: absolute
+            border-radius: 50%
+            width: 7px 
+            height: 7px 
+            top: 50%
+            left: 50% 
+            transform: translate(-50%, -50%)
+            background: #2980b9
+        &_wrap_list_menu_about::before
+            position: absolute
+            content: ''
+            border-radius: 50%
+            width: 7px 
+            height: 7px 
+            //left: 50% 
+            transform: translateY(-10px)
+            background: #2980b9
+        &_wrap_list_menu_about::after
+            content: ''
+            position: absolute
+            border-radius: 50%
+            width: 7px 
+            height: 7px 
+            //left: 50% 
+            transform: translateY(10px)
+            background: #2980b9
         &_wrap_list_menu
-            width: 40px
-            height: 4px
+            width: 30px
+            height: 3px
             background: rgba(41, 128, 185,1.0)
             position: absolute
+            transition: 0.4s ease
             content: ''
             top: 50%
             transform: translateY(-50%)
             border-radius: 50px
+        &_wrap_list_menu_active 
+            transition: 0.4s 
+            height: 0
+            transform-origin: center center
+        &_wrap_list_responsive_menu
+            transform: translateX(-3000px)
+            z-index: -100
+            position: fixed
+            background: rgba(236, 240, 241,.9)
+            width: 300px
+            height: 100vh
+            top: 0
+            left: 0
+            //overflow-y: scroll
+            //overflow-x: hidden
+            content: ''
+            transition: 1s ease-in
+        &_wrap_list_responsive_menu_active
+            transition: 0.8s ease-out
+            transform: translateX(0px)
+        &_wrap_list_responsive_menu_li
+            margin: 15px 0
+            //background: black
+            width: 301px
+            text-align: left
+            list-style: none
+            padding: 15px 25px
+            overflow: hidden
+            z-index: 99
+            position: relative
+        &_wrap_list_responsive_menu_li:hover 
+        &_wrap_list_responsive_menu_li::before 
+            //transition: 0.4s ease 
+            width: 100%
+            left: 0
+            //transform: translate(-50%, -50%)
+            top: 0
+            height: 100%
+            position: absolute
+            transform: scale(0)
+            //transform-origin: center center
+            background: rgba(52, 152, 219,.3)
+            content: ''
+            opacity: 0
+            transition: 0.1s ease
+        &_wrap_list_responsive_menu_li:hover::before
+            width: 100%
+            opacity: 1
+            transform: scale(1)
+            //transform: translate(-50%, -50%)
+            left: 0
+            transition: 0.3s ease 
+            top: 0
+            height: 100%
+            //transform-origin: center 
+            position: absolute
+            background: rgba(52, 152, 219,.3)
+            content: '' 
+        &_wrap_list_responsive_menu_ul
+            position: absolute 
+            left: 50%
+            top: 240px
+            transform: translate(-50%, -50%)
+        &_wrap_list_responsive_menu_links
+            z-index: 9999
+            position: relative
+            font-size: 18px
+            text-decoration: none
+            //text-transform: uppercase
+            color: rgba(41, 128, 185,1.0)
         &_wrap_list_menu::before 
-            width: 40px
-            height: 4px
+            transition: 0.4s ease
+            width: 30px
+            height: 3px
             background: rgba(41, 128, 185,1.0)
             position: absolute
             content: ''
-            transform: translateY(14px)
+            transform: translateY(10px)
             border-radius: 50px
         &_wrap_list_menu::after
+            transition: 0.4s ease
             border-radius: 50px
-            width: 40px
-            height: 4px
+            width: 30px
+            height: 3px
             background: rgba(41, 128, 185,1.0)
             position: absolute
             content: ''
-            transform: translateY(-14px)
+            transform: translateY(-10px)
         &_description_wrap
             padding: 0
             margin: 0
@@ -170,6 +278,29 @@
             color: #2c3e50
             position: relative
             margin-right: 100px
+        &_wrap_social_medias
+            position: absolute 
+            transform: scale(0)
+        &_wrap_list_menu_active::before
+            transition: 0.4s ease
+            width: 30px
+            height: 3px
+            background: rgba(41, 128, 185,.7)
+            position: absolute
+            content: ''
+           
+            transform: translateY(0px) rotate(-45deg)
+            border-radius: 50px
+        &_wrap_list_menu_active::after
+            //transform-origin: left bottom
+            transition: 0.4s ease
+            border-radius: 50px
+            width: 30px
+            height: 3px
+            background: rgba(41, 128, 185,.7)
+            position: absolute
+            content: ''
+            transform: translateY(0px) rotate(45deg)
     
 
 

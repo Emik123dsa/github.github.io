@@ -210,10 +210,14 @@
         margin-top: 40px
         margin-left: 20px
         margin-right: 20px
-        padding: 50px 250px
+        padding: 50px 220px
         position: relative
         border-bottom: 2px solid rgba(236, 240, 241,1.0)
         border-right: 2px solid rgba(236, 240, 241,1.0)
+        transition: 0.4s ease
+    &_features_wrap_form_suggestion_descriptions
+        position: relative
+        z-index: 99
     &_features_wrap_form_suggestion::before 
         position: absolute
         content: ''
@@ -240,7 +244,7 @@
         padding: 0
     &_features_wrap_form_suggestion_title_content
         color: rgba(236, 240, 241,1.0)
-        margin-left: -250px
+        margin-left: -220px
         z-index: 99
         +tech
         text-transform: uppercase
@@ -285,7 +289,7 @@
             margin-top: 40px
             margin-left: 20px
             margin-right: 20px
-            padding: 50px 50px
+            padding: 50px 180px
             position: relative
             border-bottom: 2px solid rgba(236, 240, 241,1.0)
             border-right: 2px solid rgba(236, 240, 241,1.0)
@@ -295,10 +299,56 @@
             width: 250px
         &_features_wrap_form_suggestion_title_content
             color: rgba(236, 240, 241,1.0)
-            margin-left: -50px
+            margin-left: -180px
             z-index: 99
             +tech
             text-transform: uppercase
             position: relative
             font-size: 24px
+
+@media (max-width: 576px)
+    .forms
+        &_features_wrap_form_suggestion
+            margin-top: 40px
+            margin-left: 20px
+            margin-right: 20px
+            padding: 50px 50px
+            position: relative
+            border-bottom: 2px solid rgba(236, 240, 241,1.0)
+            border-right: 2px solid rgba(236, 240, 241,1.0)
+        &_features_wrap_form_suggestion_title_content
+            margin-left: -50px
+        &_tables_right 
+            width: 200px
+        &_input_phone
+            width: 200px
+        &_input_e_mail
+            width: 200px
+        &_style_button_text
+            width: 200px
+
+@media (max-width: 320px)
+    .forms
+        &_features_wrap_form_suggestion
+            margin-top: 40px
+            margin-left: 20px
+            margin-right: 20px
+            padding: 40px
+            position: relative
+            border-bottom: 2px solid rgba(236, 240, 241,1.0)
+            border-right: 2px solid rgba(236, 240, 241,1.0)
+        &_features_wrap_form_suggestion_title_content
+            margin-left: -40px
+        &_features_wrap_schedule
+            padding: 40px
+        &_features_wrap_form_schedule_title_content
+            margin-left: -40px
+        &_tables_right 
+            width: 200px
+        &_input_phone
+            width: 200px
+        &_input_e_mail
+            width: 200px
+        &_style_button_text
+            width: 200px
        

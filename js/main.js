@@ -104,12 +104,14 @@ window.addEventListener("DOMContentLoaded", function() {
 });
 
 const reviewImage = document.getElementById('review_parallax');
-const navbarMenuHigh = document.querySelector('.navbar_wrap_list');
+const navbarMenuHigh = document.querySelector('.navbar_wrap');
+const menu = document.querySelector('.navbar_wrap_list_responsive_menu');
 function scroll () {
     if (pageYOffset >= 100) {
         parallax_feature.style.backgroundPositionY = `${pageYOffset/2-950}px`;
         if (document.body.clientWidth > '1170') {
         menuMain.classList.add('navbar_main_active');
+        
         //node.style.position = "absolute";
         } else {
             menuMain.classList.add('navbar_main_active_mobile');
@@ -120,14 +122,23 @@ function scroll () {
     }
     else {
         menuMain.classList.remove('navbar_main_active');
+        menuMain.classList.remove('navbar_main_active_mobile');
+        
     }
 }
 
 if (document.body.clientWidth > '1170') {
     node.style.position = "relative";
+    navbar.style.position = "relative";
+    node.style.height = "0";
+    navbar.style.height = "0";
     } else {
+        media.remove();
         //menuMain.classList.add('navbar_main_active_mobile');
         node.style.position = "absolute";
+        navbar.style.position = "absolute";
+        node.style.height = "0";
+        navbar.style.height = "0";
     }
 
 
@@ -135,14 +146,16 @@ window.addEventListener('scroll', scroll);
 
 const cartItem = document.querySelector('.experience_wrap_features_general');
 
-function rotate(event) {
-    var X = event.offsetX;
-    var Y = event.offsetY;
-    cartItem.style.transform = `rotateX(${X}px)`;
-}
 
 
-cartItem.addEventListener('mousemove', rotate)
+const buttonMenu = document.querySelector('.navbar_wrap_list_menu_link');
+const spanMenu = document.querySelector('.navbar_wrap_list_menu')
+buttonMenu.addEventListener('click', function() {
+    spanMenu.classList.toggle('navbar_wrap_list_menu_active');
+    menu.classList.toggle('navbar_wrap_list_responsive_menu_active');
+});
+
+
 
 
 }).call(this);
