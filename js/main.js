@@ -104,14 +104,16 @@ window.addEventListener("DOMContentLoaded", function() {
 });
 
 const reviewImage = document.getElementById('review_parallax');
-
+const navbarMenuHigh = document.querySelector('.navbar_wrap_list');
 function scroll () {
     if (pageYOffset >= 100) {
         parallax_feature.style.backgroundPositionY = `${pageYOffset/2-950}px`;
         if (document.body.clientWidth > '1170') {
         menuMain.classList.add('navbar_main_active');
+        //node.style.position = "absolute";
         } else {
             menuMain.classList.add('navbar_main_active_mobile');
+            
         }
         
      //reviewImage.style.backgroundPositionY = `${pageYOffset/3-1800}px`;
@@ -121,7 +123,12 @@ function scroll () {
     }
 }
 
-
+if (document.body.clientWidth > '1170') {
+    node.style.position = "relative";
+    } else {
+        //menuMain.classList.add('navbar_main_active_mobile');
+        node.style.position = "absolute";
+    }
 
 
 window.addEventListener('scroll', scroll);
