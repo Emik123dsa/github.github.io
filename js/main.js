@@ -1,6 +1,12 @@
 
 (function() {
-
+    document.body.onload = function () {
+        setTimeout(function() {
+            var preloader = document.getElementById('page-preloader');
+            if(!preloader.classList.contains('preloader')) {
+                preloader.classList.add('done');
+            }
+}, 2000); }
 const parallax_feature = document.getElementById('parallax_first');
 const menuMain = document.querySelector('.navbar_main');
 
